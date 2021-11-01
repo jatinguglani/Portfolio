@@ -1,26 +1,26 @@
-/*-------------smooth scrool------------------------ */
-var navMenuAnchorTags = document.querySelectorAll('.nav-menu a');
+// /*-------------smooth scrool------------------------ */
+// var navMenuAnchorTags = document.querySelectorAll('.nav-menu a');
 
-function scroll(event){
-    event.preventDefault();
-    var target = this.textContent.trim().toLowerCase();
-    var targety = document.getElementById(target);
-    console.log(targety);
-    var scroolInterval = setInterval(function(){
-                            var coordinates = targety.getBoundingClientRect();
-                            console.log(coordinates.top);
-                            if(coordinates.top<=0){
-                                clearInterval(scroolInterval);
-                                return;
-                            }
-                            window.scrollBy(0, 50);
-                        }, 20);
-}
+// function scroll(event){
+//     event.preventDefault();
+//     var target = this.textContent.trim().toLowerCase();
+//     var targety = document.getElementById(target);
+//     console.log(targety);
+//     var scroolInterval = setInterval(function(){
+//                             var coordinates = targety.getBoundingClientRect();
+//                             console.log(coordinates.top);
+//                             if(coordinates.top<=0){
+//                                 clearInterval(scroolInterval);
+//                                 return;
+//                             }
+//                             window.scrollBy(0, 50);
+//                         }, 20);
+// }
 
-for(var i=0; i<navMenuAnchorTags.length; i++)
-{
-    navMenuAnchorTags[i].addEventListener('click',scroll);
-}
+// for(var i=0; i<navMenuAnchorTags.length; i++)
+// {
+//     navMenuAnchorTags[i].addEventListener('click',scroll);
+// }
 /*----------------------skill animation------------------------------ */
 
 var skillProgress = document.querySelectorAll('.skills-progress > div');
